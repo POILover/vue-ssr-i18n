@@ -1,0 +1,24 @@
+@import './element-variables.scss';
+
+
+#app{height: calc(100% - 76px);}
+.app-container{
+    // TODO: 适配移动端
+    max-width: 1210px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 100%;
+    
+}
+
+
+// quill style
+.ql-snow .ql-picker {
+    line-height: 20px;
+  }
+.editor .ql-container {
+    min-height: 400px;
+    max-height: 800px;
+}
