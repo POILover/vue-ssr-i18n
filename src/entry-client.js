@@ -1,9 +1,10 @@
 import { createApp } from './app'
 import Vue from 'vue'
 import Cookies from 'js-cookie'
-// 给组件添加mixin，执行组件中暴露出来的asyncData方法
+// add beforeRouteUpdate mixin for every component to excute function asyncData if exist
+// function asyncData is for server-rendering interface data
 Vue.mixin({
-    beforeRouteUpdate (to, from, next) {
+    beforeRouteUpdate (to, _, next) {
       const { asyncData } = this.$options
       if (asyncData) {
         // if there is function asyncData, execute firstly

@@ -1,18 +1,4 @@
 export default{
     route:'Route',
-    title:'Tartan Energy Group',
-    home:'HOME',
-    news:'NEWS',
-    about:'ABOUT',
-    product:'PRODUCT',
-    case:'CASES',
-    hse:'HSE',
-    contactus:'CONTACT US',
-    joinus:'JOIN US',
-    MiningTech:'Unconventional oil and gas production technical services',
-    intelligentProCtrl:'Intelligent production control',
-    oilfield:'Digital Oilfield',
-    photovoltaic:'Photovoltaic / energy storage',
-    investor:'INVESTOR',
-    productAndService:'Product & Service',
+    investor: 'Investor'
 }

@@ -1,4 +1,5 @@
 //  NOTE: template内的图片路径要用打包后的，所以必须放在public内，并添加/dist前缀
+// if v-html want to render image or somthing, href must be same with webpacked path, just like /dist/... 
 export const generateRoute4 = (i18n) => [
     {
         name: `${i18n.t('route')}4_1`,

@@ -15,8 +15,8 @@ export const createStore = () => {
             },
         },
         actions: {
-            // if you want to server-render interface data, you must use vuex
-            // action must return a Promise
+            // if you want to server-render interface data, you must use vuex.
+            // and action must return a Promise
             SET_ROUTE4_CONTENT({commit},{pathMatch,i18n}){
                 return new Promise((resolve, _)=>{
                     // 根据match查询location和template TODO: 404处理

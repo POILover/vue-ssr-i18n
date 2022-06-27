@@ -21,7 +21,7 @@ if (process.browser) {
     Vue.use(VueQuillEditor, /* { default global options } */)
 }
 
-// 添加title的mixin，TODO:国际化待优化
+// add mixin of page title，TODO:国际化待优化
 Vue.mixin({
     mounted(){
         // FIXME: $i18n undefined bug
@@ -36,26 +36,26 @@ Vue.mixin({
     }
 })
 
-// 导出创建Vue实例的工厂函数
+// export factory function of creating Vue obj instance
 export function createApp({locale,token}) {
     const store = createStore()
     const i18n = createI18n(locale)
     const router = createRouter(i18n)
     // TODO: sync函数的作用
     sync(store, router)
-    // 路由拦截在这里
+    // router interceptor
     router.beforeEach((to,from,next)=>{
         
         
         if(to.matched.some(item=>item.path=='/route4/*')){
-            // 全局hack由router-link和el-menu-item引起的相同路由跳转bug
+            // fix duplicated router bug casued by router-link and el-menu-item
             if(from.matched.some(item=>item.path=='/redirect/:path*')){
                 next()
             }else{
                 next(`/redirect${to.path}`)
             }
         }else if(to.matched.some(item=>item.path=='/admin')){
-            //简单权限拦截一下admin页面
+            //simply intercept the router into admin module
             // FIXME: 刷新页面重定向后，服务端和客户端不匹配
             let token = Cookies.get('token')
             console

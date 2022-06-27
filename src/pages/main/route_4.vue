@@ -36,7 +36,7 @@ ol.content-list {
   margin-top: 14px;
   background-color: white;
   padding-bottom: 30px;
-  overflow: hidden; //overflow hidden 防止上下两个div margin合并
+  overflow: hidden; //prevent margin collapse 
   .title-container {
     background-color: #eee;
     overflow: hidden;
